@@ -49,7 +49,7 @@ Page({
     var self = this;
     var userInfo = wx.getStorageSync('user');
     // 判断是否登陆
-    if (userInfo.is_completed) {
+    if (userInfo && userInfo.is_completed) {
       // 获取用户信息
       if (userInfo.avatar === null) {
         userInfo.avatar = "/images/default-avatar.png";

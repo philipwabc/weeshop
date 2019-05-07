@@ -66,7 +66,7 @@ Page({
   bindUserTap() {
     var self = this,
       userInfo = wx.getStorageSync("user");
-    if (userInfo.avatar === null) {
+    if (userInfo && userInfo.avatar === null) {
       userInfo.avatar = "/images/default-avatar.png";
     }
     // 判断是否登陆
